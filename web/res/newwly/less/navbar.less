@@ -1,0 +1,57 @@
+
+.navbar {
+  overflow: visible;
+  margin-bottom: @baseLineHeight;
+
+  // Fix for IE7's bad z-indexing so dropdowns don't appear below content that follows the navbar
+  *position: relative;
+  *z-index: 2;
+}
+
+// Inner for background effects
+// Gradient is applied to its own element because overflow visible is not honored by IE when filter is present
+.navbar-inner {
+	min-height: @navbarHeight;
+	padding-left:  20px;
+	padding-right: 40px;
+	background-color: @navbarBackground;
+	border-bottom: 1px solid @navbarBorder;
+  .clearfix();
+}
+
+.pull-right {
+  float: right;
+}
+
+.navbar .brand {
+  float: left;
+  display: block;
+  background: @navbarBackground url('../img/newwly.jpg') no-repeat left top;
+  width: @navbarHeight*2;
+  height: @navbarHeight;
+  span {display:none;}
+  outline:none;
+}
+
+// Plain text in topbar
+// -------------------------
+.navbar-text {
+	margin:0;
+	line-height: @navbarHeight;
+	float:left;
+	margin-right: @baseLineHeight
+}
+// Buttons in navbar
+// -------------------------
+.navbar .btn {
+  .navbarVerticalAlign(30px); // Vertically center in navbar
+}
+.navbar .btn-group .btn,
+.navbar .input-prepend .btn,
+.navbar .input-append .btn,
+.navbar .input-prepend .btn-group,
+.navbar .input-append .btn-group {
+  margin-top: 0; // then undo the margin here so we don't accidentally double it
+}
+
+
