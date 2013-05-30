@@ -1,0 +1,3 @@
+newwly_dashboard_homepage:
+    pattern:  /
+    defaults: { _controller: NewwlyDashboardBundle:Default:index }

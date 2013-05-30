@@ -1,3 +1,7 @@
+newwly_dashboard:
+    resource: "@NewwlyDashboardBundle/Resources/config/routing.yml"
+    prefix:   /dashboard
+
 newwly_user:
     resource: "@NewwlyUserBundle/Resources/config/routing.yml"
     prefix:   /

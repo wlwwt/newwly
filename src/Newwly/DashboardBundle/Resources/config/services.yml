@@ -1,0 +1,7 @@
+parameters:
+#    newwly_dashboard.example.class: Newwly\DashboardBundle\Example
+
+services:
+#    newwly_dashboard.example:
+#        class: %newwly_dashboard.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]
