@@ -1,0 +1,7 @@
+parameters:
+#    newwly_user.example.class: Newwly\UserBundle\Example
+
+services:
+#    newwly_user.example:
+#        class: %newwly_user.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

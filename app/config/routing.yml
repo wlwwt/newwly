@@ -1,0 +1,4 @@
+newwly_user:
+    resource: "@NewwlyUserBundle/Resources/config/routing.yml"
+    prefix:   /
+
