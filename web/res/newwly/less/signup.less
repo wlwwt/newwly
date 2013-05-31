@@ -1,13 +1,8 @@
 .form-signin {
-	padding: 5px 20px ((@navbarHeight - @baseLineHeight) / 2);
+	padding: 5px 25px ((@navbarHeight - @baseLineHeight) / 2);
 	background-color: @navbarBackground;
 	border: 1px solid @navbarBorder;
-   }
- 
-.form-signin input[type="text"],
-.form-signin input[type="password"] {
-  font-size: 16px;
-  height: auto;
-  margin-bottom: 15px;
-  padding: 7px 9px;
+	.clearfix();
 }
+.form-signin .btn-login {float:left; margin-right:@baseLineHeight;}
+.form-signin .checkbox {float:left; margin-top:5px;}

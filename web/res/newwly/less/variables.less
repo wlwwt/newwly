@@ -20,7 +20,7 @@
 
 // Accent colors
 // -------------------------
-@blue:                  #00A0B0;
+@blue:                  #547980;
 @blueDark:              #0064cd;
 @green:                 #46a546;
 @red:                   #CC333F;
@@ -38,7 +38,7 @@
 
 // Links
 // -------------------------
-@linkColor:             #08c;
+@linkColor:             @blueDark;
 @linkColorHover:        darken(@linkColor, 15%);
 
 
@@ -48,7 +48,7 @@
 @serifFontFamily:       Georgia, "Times New Roman", Times, serif;
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
-@baseFontSize:          87.25%;
+@baseFontSize:          13px;
 @baseFontFamily:        @sansFontFamily;
 @baseLineHeight:        22px;
 @altFontFamily:         @serifFontFamily;
@@ -79,8 +79,8 @@
 // -------------------------
 @tableBackground:                   transparent; // overall background-color
 @tableBackgroundAccent:             #f9f9f9; // for striping
-@tableBackgroundHover:              #f5f5f5; // for hover
-@tableBorder:                       #ddd; // table and cell border
+@tableBackgroundHover:              @grayLighter; // for hover
+@tableBorder:                       darken(@grayLighter, 5%); // table and cell border
 
 // Buttons
 // -------------------------
@@ -217,8 +217,8 @@
 // Pagination
 // -------------------------
 @paginationBackground:                #fff;
-@paginationBorder:                    #ddd;
-@paginationActiveBackground:          #f5f5f5;
+@paginationBorder:                    darken(@grayLighter, 5%);
+@paginationActiveBackground:          @grayLighter;
 
 
 // Hero unit
