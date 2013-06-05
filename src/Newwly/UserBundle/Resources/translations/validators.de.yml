@@ -23,3 +23,9 @@ fos_user:
         blank: Bitte geben Sie einen Namen an
         short: "[-Inf,Inf]Dieser Name ist zu kurz"
         long: "[-Inf,Inf]Dieser Name ist zu lang"
+    kindlemail:
+        already_used: Diese Kindle E-Mail-Adresse wird bereits verwendet
+        blank: Bitte geben Sie ihre Kindle E-Mail-Adresse an
+        short: "[-Inf,Inf]Diese Kindle E-Mail-Adresse ist zu kurz"
+        long: "[-Inf,Inf]Diese Kindle E-Mail-Adresse ist zu lang"
+        invalid: Diese Kindle E-Mail-Adresse ist ungültig

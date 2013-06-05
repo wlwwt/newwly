@@ -1,5 +1,14 @@
 {% extends "FOSUserBundle::layout.html.twig" %}
 
 {% block fos_user_content %}
+
+{% for type, messages in app.session.flashbag.all() %}
+{% for message in messages %}
+	<div class="alert alert-{{ type }}">
+		{{ message }}
+	</div>
+{% endfor %}
+{% endfor %}
+
 {% include "FOSUserBundle:Profile:show_content.html.twig" %}
 {% endblock fos_user_content %}

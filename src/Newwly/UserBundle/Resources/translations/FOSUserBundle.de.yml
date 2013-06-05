@@ -18,14 +18,16 @@ security:
     login:
         username: "Benutzername:"
         password: "Passwort:"
-        remember_me: An mich erinnern
+        remember_me: Angemeldet bleiben
         submit: Anmelden
+        reset: Sie können nicht auf Ihr Konto zugreifen?
 
 # Profile
 profile:
     show:
         username: Benutzername
         email: E-Mail
+        kindlemail: Ihre Kindle E-Mail
     edit:
         submit: Benutzer aktualisieren
     flash:
@@ -63,6 +65,7 @@ resetting:
         invalid_username: Der Benutzername oder die E-Mail-Adresse "%username%" existiert nicht.
         username: "Benutzername oder E-Mail-Adresse:"
         submit: Passwort zurücksetzen
+        tologin: Zum Anmeldeformular
     reset:
         submit: Passwort ändern
     flash:
@@ -94,3 +97,4 @@ form:
     password_confirmation: "Passwort bestätigen:"
     new_password: "Neues Passwort:"
     new_password_confirmation: "Neues Passwort bestätigen:"
+    kindlemail: "Ihre Kindle-Mailadresse:"

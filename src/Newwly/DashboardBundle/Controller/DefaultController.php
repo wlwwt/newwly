@@ -8,7 +8,8 @@ class DefaultController extends Controller
 {
     public function indexAction()
     {
-        //return $this->render('NewwlyDashboardBundle:Default:index.html.twig', array('name' => $name));
+        $flash = $this->get('translator')->trans('Info: Your are in the dashboard');
+        $this->get('session')->getFlashBag()->add('info', $flash);
         return $this->render('NewwlyDashboardBundle:Default:index.html.twig');
     }
 }

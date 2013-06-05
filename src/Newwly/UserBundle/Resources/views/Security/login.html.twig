@@ -3,22 +3,26 @@
 {% trans_default_domain 'FOSUserBundle' %}
 
 {% block fos_user_content %}
-{% if error %}
-    <div>{{ error|trans }}</div>
-{% endif %}
 
-<form action="{{ path("fos_user_security_check") }}" method="post">
-    <input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
-
-    <label for="username">{{ 'security.login.username'|trans }}</label>
-    <input type="text" id="username" name="_username" value="{{ last_username }}" required="required" />
-
-    <label for="password">{{ 'security.login.password'|trans }}</label>
-    <input type="password" id="password" name="_password" required="required" />
-
-    <input type="checkbox" id="remember_me" name="_remember_me" value="on" />
-    <label for="remember_me">{{ 'security.login.remember_me'|trans }}</label>
-
-    <input type="submit" id="_submit" name="_submit" value="{{ 'security.login.submit'|trans }}" />
+<form action="{{ path("fos_user_security_check") }}" method="post" class="form-signin">
+	
+	<fieldset>
+		<input type="hidden" name="_csrf_token" value="{{ csrf_token }}" />
+		<h3>{{ 'security.login.submit'|trans }}</h3>
+		<label for="username">{{ 'security.login.username'|trans }}</label>
+		<input type="text" id="username" class="input-block-level" name="_username" value="{{ last_username }}" required="required" placeholder="{{ 'security.login.username'|trans }}" />
+		<label for="password">{{ 'security.login.password'|trans }}</label>
+		<input type="password" id="password" class="input-block-level" name="_password" required="required" placeholder="{{ 'security.login.password'|trans }}" />
+		<button type="submit" id="_submit" class="btn btn-primary btn-login" name="_submit" value="">{{ 'security.login.submit'|trans }}</button>
+		<label class="checkbox">
+		  <input type="checkbox" id="remember_me" name="_remember_me" value="on"> {{ 'security.login.remember_me'|trans }}
+		</label>
+	</fieldset>
+	<a class="forgot-passwd" href="{{ path('fos_user_resetting_request') }}">{{ 'security.login.reset'|trans }}</a>
+    
 </form>
+
+{% if error %}
+<div class="alert alert-error">{{ error|trans }}</div>
+{% endif %}
 {% endblock fos_user_content %}

@@ -1,4 +1,13 @@
 {% extends '::base.html.twig' %}
 
 {% block title %}Dashboard{% endblock %}
+{% block body %}
+{% for type, messages in app.session.flashbag.all() %}
+{% for message in messages %}
+	<div class="alert alert-{{ type }}">
+		{{ message }}
+	</div>
+{% endfor %}
+{% endfor %}
+{% endblock %}
 

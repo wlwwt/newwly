@@ -2,6 +2,14 @@ parameters:
 #    newwly_user.example.class: Newwly\UserBundle\Example
 
 services:
-#    newwly_user.example:
-#        class: %newwly_user.example.class%
-#        arguments: [@service_id, "plain_value", %parameter%]
+    newwly_user.registration.form.type:
+        class: Newwly\UserBundle\Form\Type\RegistrationFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: newwly_user_registration }
+    newwly_user.profile.form.type:
+        class: Newwly\UserBundle\Form\Type\ProfileFormType
+        arguments: [%fos_user.model.user.class%]
+        tags:
+            - { name: form.type, alias: newwly_user_profile }
+    

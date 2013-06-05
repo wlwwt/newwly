@@ -1,28 +1,33 @@
 {% extends '::base.html.twig' %}
 
 {% block body %}
-<div>
-{% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
-	{{ 'layout.logged_in_as'|trans({'%username%': app.user.username}, 'FOSUserBundle') }} |
-	<a href="{{ path('fos_user_security_logout') }}">
-		{{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
-	</a>
-{% else %}
-	<a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
-{% endif %}
-</div>
 
-{% for type, messages in app.session.flashbag.all() %}
-{% for message in messages %}
-	<div class="flash-{{ type }}">
-		{{ message }}
+<div class="container">
+	<div class="row">
+		<div class="span4">
+			<h2>newwly</h2>
+			<p>Lesen Sie Ihre individuell angepasste Zeitung als eBook.</p>
+		</div>
+		<div class="span3">
+			<img src="{{ asset('/assets/img/kindle.jpg') }}" alt="" />
+		</div>
+		<div class="span5">
+		{% block fos_user_content %}
+		{% endblock fos_user_content %}
+		</div>
 	</div>
-{% endfor %}
-{% endfor %}
-
-<div>
-{% block fos_user_content %}
-{% endblock fos_user_content %}
+	<div class="row">
+		<div class="span6">
+			<h3>Bootstrap starter template</h3>
+			<p>Use this document as a way to quick start any new project.<br> All you get is this message and a barebones HTML document.</p>
+			<p class="btn btn-action">Konto erstellen</p>
+		</div>
+		<div class="span6">
+			<h3>Bootstrap starter template</h3>
+			<p>Use this document as a way to quick start any new project. All you get is this message and a barebones HTML document.</p>
+			<p class="btn btn-primary">Mehr erfahren</p>
+		</div>
+	</div>
 </div>
 {% endblock %}
 
