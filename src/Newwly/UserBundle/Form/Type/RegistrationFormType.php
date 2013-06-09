@@ -4,6 +4,7 @@ namespace Newwly\UserBundle\Form\Type;
 
 use Symfony\Component\Form\FormBuilderInterface;
 use FOS\UserBundle\Form\Type\RegistrationFormType as BaseType;
+use Newwly\UserBundle\Form\DataTransformer\StringToLowercaseTransformer;
 
 class RegistrationFormType extends BaseType
 {
@@ -11,6 +12,8 @@ class RegistrationFormType extends BaseType
 
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
+        $transformer = new StringToLowercaseTransformer();
+        
         $builder
             ->add('username', 'text', array(
                 'label' => 'form.username',
@@ -59,7 +62,8 @@ class RegistrationFormType extends BaseType
                     )),
                 'invalid_message' => 'fos_user.password.mismatch',
             ))
-            ->add('kindlemail', 'text', array(
+            ->add(
+                $builder->create('kindlemail', 'text', array(
                 'translation_domain' => 'FOSUserBundle',
                 'label' => 'form.kindlemail',
                 'label_attr' => array(
@@ -70,8 +74,10 @@ class RegistrationFormType extends BaseType
                     'class' => 'input-block-level',
                     'placeholder' => 'form.kindlemail',
                     )
-                ))
-        ;
+                ))  ->resetViewTransformers()
+                    ->addModelTransformer($transformer)
+            );
+        
     }
 
     public function getName()

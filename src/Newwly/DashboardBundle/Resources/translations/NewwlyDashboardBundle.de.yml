@@ -1,0 +1,19 @@
+# Navigation
+navigation:
+    dashboard: "Dashboard"
+    create: "Neue Zeitung erstellen"
+    list: "Meine Zeitungen"
+    profile: "Benutzerkonto"
+
+# Dashboard
+dashboard:
+    show:
+        username: Benutzername
+        email: E-Mail
+        kindlemail: Ihre Kindle E-Mail
+    edit:
+        submit: Benutzer aktualisieren
+    flash:
+        updated: Das Benutzerprofil wurde aktualisiert
+
+

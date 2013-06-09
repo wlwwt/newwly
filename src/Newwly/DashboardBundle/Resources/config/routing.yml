@@ -1,3 +1,11 @@
 newwly_dashboard_homepage:
     pattern:  /
     defaults: { _controller: NewwlyDashboardBundle:Default:index }
+
+newwly_dashboard_newspaper_create:
+    pattern: /newspaper/create
+    defaults: { _controller: NewwlyDashboardBundle:Newspaper:create }
+
+newwly_dashboard_newspaper_list:
+    pattern: /newspaper/list
+    defaults: { _controller: NewwlyDashboardBundle:Newspaper:list }

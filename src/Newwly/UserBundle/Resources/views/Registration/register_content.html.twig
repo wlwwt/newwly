@@ -6,4 +6,5 @@
 		{{ form_widget(form) }}
 		<input type="submit" class="btn btn-primary btn-login" value="{{ 'registration.submit'|trans }}" />
 	</fieldset>
+        <a class="back-login" href="{{ path('fos_user_security_login') }}">{{ 'resetting.request.tologin'|trans }}</a>
 </form>
